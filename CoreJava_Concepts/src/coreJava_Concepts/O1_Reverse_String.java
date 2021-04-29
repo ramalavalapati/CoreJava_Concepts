@@ -14,6 +14,11 @@ public class O1_Reverse_String {
 		}
 		
 		System.out.println(rev);
+		
+		StringBuffer sbRev = new StringBuffer(str);
+		
+		System.out.println(sbRev.reverse());
+		
 
 	}
 
