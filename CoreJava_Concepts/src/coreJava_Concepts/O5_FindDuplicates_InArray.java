@@ -1,6 +1,10 @@
 package coreJava_Concepts;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+//import java.util.Map.Entry;
 import java.util.Set;
 
 public class O5_FindDuplicates_InArray {
@@ -32,6 +36,38 @@ public class O5_FindDuplicates_InArray {
 			}
 			
 		}
+		
+		System.out.println("**********************");
+		
+		//get values from this HashMap:
+		
+		
+		Map<String, Integer> storeMap = new HashMap<String, Integer>();
+		
+		for(String lang : languages) {
+			Integer count = storeMap.get(lang);
+			if(count == null) {
+				storeMap.put(lang, 1);
+			} else {
+				storeMap.put(lang, ++count);
+			}
+		}
+		
+		
+		Set<Entry<String, Integer>> entrySet = storeMap.entrySet();
+		
+		for(Entry<String, Integer> entry : entrySet) {
+			if(entry.getValue() > 1) {
+				System.out.println(entry.getKey());
+			}
+		}
+		
+		
+
+
+		
+		
+		
 
 	}
 
